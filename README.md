@@ -1,15 +1,10 @@
 # Project: Feed reader testing
 
-In this project students were given a web-based application that reads RSS feeds. The original developer of this application already included [Jasmine](http://jasmine.github.io/) and started writing the first test suite. Rest of the tests had to be completed by students.
-
+In this project students were given a web-based application that reads RSS feeds. The original developer of this application already included [Jasmine](http://jasmine.github.io/) and started writing the first test suite. Rest of the tests had to be completed by the students.
 
 ## How to run
 
 Clone or download the repository and open index.html in a browser of your choice.
-
-## How to use the Feed reader
-
-Go to:
 
 ## Authors
 

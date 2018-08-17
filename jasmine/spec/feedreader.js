@@ -90,22 +90,22 @@ $(function() {
       /* This is a test that ensures when a new feed is loaded
        * by the loadFeed function that the content actually changes.
        */
-       let feedContainer = document.querySelector('.feed');
-       let content1;
-       let content2;
-       
-       beforeEach(function(done){
-         loadFeed(0);
-         content1 = document.querySelector('.entry').innerText;
-         console.log(content1);
-         loadFeed(1, done);
-       });
+        let feedContainer = document.querySelector('.feed');
+        let content1;
+        let content2;
 
-       it('content is changing', function(){
-         let content2 = document.querySelector('.entry').innerText;
-         expect(content1).not.toBe(content2);
-         console.log(content2);
-       })
+        beforeEach(function(done){
+          loadFeed(0);
+          content1 = document.querySelector('.entry').innerText;
+          console.log(content1);
+          loadFeed(1, done);
+        });
+
+        it('content is changing', function(){
+          let content2 = document.querySelector('.entry').innerText;
+          expect(content1).not.toBe(content2);
+          console.log(content2);
+        });
     });
 
 }());
