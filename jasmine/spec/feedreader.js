@@ -97,9 +97,9 @@ $(function() {
         beforeEach(function(done){
           loadFeed(0, function(){
             content1 = document.querySelector('.entry').innerText;
-            loadFeed(1, function(){
-            let content2 = document.querySelector('.entry').innerText;
-            done();
+            loadFeed(1, function() {
+              content2 = document.querySelector('.entry').innerText;
+              done();
             });
           });
         });
