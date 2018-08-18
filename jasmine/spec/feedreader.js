@@ -80,8 +80,8 @@ $(function() {
           loadFeed(0, done);
         });
         it('are not empty', function(){
-            let feedContainer = document.querySelector('.feed');
-            expect(feedContainer.children.length>0).toBe(true);
+            let entry = document.querySelector('.feed .entry');
+            expect(entry).not.toBe(null);
             });
         });
 
@@ -95,16 +95,17 @@ $(function() {
         let content2;
 
         beforeEach(function(done){
-          loadFeed(0);
-          content1 = document.querySelector('.entry').innerText;
-          console.log(content1);
-          loadFeed(1, done);
+          loadFeed(0, function(){
+            content1 = document.querySelector('.entry').innerText;
+            loadFeed(1, function(){
+            let content2 = document.querySelector('.entry').innerText;
+            done();
+            });
+          });
         });
 
         it('content is changing', function(){
-          let content2 = document.querySelector('.entry').innerText;
           expect(content1).not.toBe(content2);
-          console.log(content2);
         });
     });
 
